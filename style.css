@@ -1,0 +1,236 @@
+:root {
+  --Blue: hsl(246, 80%, 60%);
+
+  --LightOrange: hsl(15, 100%, 70%);
+  --Softblue: hsl(195, 74%, 62%);
+  --Lightred: hsl(348, 100%, 68%);
+  --Limegreen: hsl(145, 58%, 55%);
+  --Violet: hsl(264, 64%, 52%);
+  --Softorange: hsl(43, 84%, 65%);
+
+  /* ### Neutral */
+
+  --Verydarkblue: hsl(226, 43%, 10%);
+  --Darkblue: hsl(235, 46%, 20%);
+  --Desaturatedblue: hsl(235, 45%, 61%);
+  --PaleBlue: hsl(236, 100%, 87%);
+  --font: "Rubik", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1110px;
+  margin: auto;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--Verydarkblue);
+  color: var(--PaleBlue);
+  font-family: var(--font);
+}
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px 30px;
+}
+.card {
+  border-radius: 15px;
+  background-color: var(--LightOrange);
+  overflow: hidden;
+  /* padding-top: 45px; */
+  position: relative;
+}
+.card-body {
+  background-color: var(--Darkblue);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  padding: 30px;
+  /* margin-top: -30px; */
+  position: relative;
+  z-index: 100;
+  cursor: pointer;
+}
+.card-body:hover {
+  background-color: var(--Desaturatedblue);
+}
+.profile-card {
+  grid-row: span 2;
+}
+.card-body-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  color: white;
+}
+.card-body-header span {
+  display: block;
+}
+
+.card-body-header span img {
+  display: block;
+  max-width: 100%;
+}
+.hour {
+  padding-top: 26px;
+  font-size: 45px;
+  font-weight: 300;
+  color: white;
+}
+.card-body-footer {
+  font-size: 14px;
+  padding-top: 10px;
+  color: var(--PaleBlue);
+}
+.work {
+  background-color: var(--LightOrange);
+}
+.play {
+  background-color: var(--Softblue);
+}
+.study {
+  background-color: var(--Lightred);
+}
+.exercise {
+  background-color: var(--Limegreen);
+}
+.social {
+  background-color: var(--Violet);
+}
+.selfcare {
+  background-color: var(--Softorange);
+}
+.card-top {
+  position: relative;
+  padding-top: 48px;
+}
+.card-top-icon {
+  position: absolute;
+  top: -8px;
+  right: 20px;
+}
+.profile-card {
+  background: var(--Darkblue);
+  overflow: hidden;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.profile-image-container {
+  width: 84px;
+  border-radius: 50%;
+  border: 3px solid white;
+  overflow: hidden;
+}
+.profile-image-container img {
+  max-width: 100%;
+  display: block;
+}
+.profile-card-top {
+  border-radius: 15px;
+  padding: 30px;
+  background-color: var(--Blue);
+  flex-grow: 1;
+}
+.profile-card-bottom {
+  padding: 30px;
+}
+.profile-card-bottom a {
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
+.profile-card-bottom a:nth-child(2) {
+  padding: 15px 0 !important;
+}
+.profile-card-top p {
+  margin-top: 38px;
+  font-size: 14px;
+}
+.profile-card-top .name {
+  font-size: 32px;
+  font-weight: 300;
+  color: white;
+}
+.profile-link.active,
+.profile-link:hover {
+  color: white;
+}
+@media only screen and (max-width: 510px) {
+  .grid {
+    grid-template-columns: 100%;
+  }
+  .profile-card {
+    grid-row: auto;
+  }
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+  main {
+    padding: 60px 30px;
+  }
+  .profile-card-top {
+    display: flex;
+    align-items: center;
+  }
+  .profile-image-container {
+    width: 70px;
+  }
+  .profile-card-top p {
+    margin-top: 0px;
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+  .profile-card-top .name {
+    font-size: 22px;
+  }
+  .profile-card-top .profile-right {
+    padding-left: 18px;
+  }
+  .profile-card-bottom {
+    padding: 30px;
+  }
+  .profile-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .profile-links a {
+    text-decoration: none;
+    display: block;
+  }
+  .profile-links a:nth-child(2) {
+    padding: 0 15px !important;
+  }
+  .hour-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+  }
+  .hour {
+    padding-top: 0;
+    font-size: 32px;
+  }
+  .card-body-footer {
+    padding-top: 0;
+  }
+  .card-top {
+    position: relative;
+    padding-top: 42px;
+  }
+}
